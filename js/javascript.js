@@ -46,44 +46,25 @@ addEventListener("scroll", () => {
     lastScrollTop = scrollTop;
 });
 
-// scroll behavior
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 100;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
-}
-
-window.addEventListener("scroll", reveal);
-
 //cards flip ao clicar
 
-var cards = document.querySelectorAll('.card');
+// var cards = document.querySelectorAll('.card');
 
-[...cards].forEach((card)=>{
-  card.addEventListener( 'click', function() {
-    card.classList.toggle('is-flipped');
-  });
-});
+// [...cards].forEach((card)=>{
+//   card.addEventListener( 'click', function() {
+//     card.classList.toggle('is-flipped');
+//   });
+// });
 
-//pop-up form
-let popup = document.getElementById("popup");
+// //pop-up form
+// let popup = document.getElementById("popup");
 
-function openPopup(){
-  popup.classList.add("open-popup");
-}
-function closePopup(){
-  popup.classList.remove("open-popup");
-}
+// function openPopup(){
+//   popup.classList.add("open-popup");
+// }
+// function closePopup(){
+//   popup.classList.remove("open-popup");
+// }
 
 
 //countUp about

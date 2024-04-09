@@ -13,194 +13,128 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 500px; 
 }
-.cardcontainer{
-    position: relative;
-    background-color: #DCCABC;
+.servicescontainer{
+    background-color: #F3F3F3;
     width: 100%;
-    max-width: 9500px;
+    max-width: 3290px;
     margin: auto;
-    height: 100%;
-    max-height: 480px;
-    z-index: 999;
-    margin-top: -150px;
 }
+.services{
+    width: 100%;
+    max-width: 3900px;
+    margin: auto;
+    padding: 70 0 50 0;
+}
+.servicestitle{
+    font-family: 'Urbanist', sans-serif;
+    color: #070707
+}
+.servicescontainer .servicestitle h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+.servicestitle h2 svg{
+    margin-top: 16px;
+}
+
 /* THE MAINCONTAINER HOLDS EVERYTHING */
 .maincontainer{
     display: flex;
-    position: relative;
-    background-color: #DCCABC;
     width: 100%;
-    max-width: 1350px;
+    max-width: 1500px;
     margin: auto;
-    height: 100%;
-    max-height: 440px;
+    height: 370px;
+    padding-left: 70px;
 }
 
 /* THE CARD HOLDS THE FRONT AND BACK FACES */
-.card{
+.thecard{
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
   max-width: 300px;
   height: 100%;
-  margin: auto;
+  transform-style: preserve-3d;
   transition: all 0.8s ease;
+  margin-right: 50px;
 }
 
-/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
 .thecard:hover{
+  transform: rotateY(180deg);
 }
- */
+
 /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
  .thefront{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 300px;
   height: 100%;
-  border-radius: 32px;
+  max-width: 300px;
+  border-radius: 30px;
   backface-visibility: hidden;
-  border: 1px solid #504000;
   overflow: hidden;
 }
-.thefront img, .card__face--front img{
+.thefront img{
   border-radius: 30px;
-  width: 100%;
-  max-width: 300px;
-  height: 400px;
+
 }
 
 /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
 .theback{
   position: absolute;
-  display: flex;
-  flex-direction: column;
   top: 0;
   left: 0;
   width: 100%;
   max-width: 300px;
   height: 100%;
-  border-radius: 32px;
+  border-radius: 30px;
   backface-visibility: hidden;
   overflow: hidden;
-  background: #030606;
-  padding: 30px 20px;
-  border: 1px solid #FFF;
+  background: #0C1B32;
+  padding: 60px 20px;
   text-align: center;
+  transform: rotateY(180deg);
 }
 
 
 /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
-.theback h2{
-  color: #E8C948;
+.thefront h2, .theback h2{
+  color: #E0B451;
   margin-bottom: 30px;
   font-size: 12px;
   font-style: normal;
   font-weight: 900;
   line-height: 100%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
 }
 
-.theback p{
+.thefront p, .theback p{
   font-size: 14px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 130%;
   color: #FFF;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  text-align: center;
-  margin-top: 25px;
 }
 /*This block (ends here) is merely styling for the flip card, and is NOT an essential part of the flip code */
- @media screen and (max-width:1300px) {
-    .maincontainer{
-        display: flex;
-        row-gap: 24px;
-        max-width: 930px;
-    }
-    .thecard{
-        margin-right: 20px;
-    }
+@media screen and (max-width:790px) {
     .servicescontainer{
-        max-height: 990px;
-    }
-    .cardcontainer{
-        margin-top: -50px;
-    }
-    .servicestitle{    
-        margin-top: -400px;
-    }
-}
-@media screen and (max-width:990px) {
-    .services{
-        padding: 150px 50px;
-    }
-    .servicestitle{
-        display: flex;
-        flex-direction: column;
-        max-width: 665px;
-        margin: auto;
-        margin-top: -300px;
-        float: left;
-        padding: 0;
-    }
-    .servicescontainer .servicestitle h2{
-        font-size: 12px;
-        font-weight: 600;
+    padding: 100 0 0 0;
     }
     .servicestitle p{
-        font-size: 24px;
-        max-width: 800px;
         margin: auto;
-        margin-top: 10px;
+        padding: 0 40;
+        font-size:14px;
+        margin-bottom: 40px;
     }
-    .maincontainer{
-        display: block;
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-        padding: 0;
-        text-align: center;
-    }    
-    .cardcontainer{
-        max-height: 450px;
-        margin-top: -102px;
-    }
-} 
-  .scene {
-    display: inline-block;
-    perspective: 600px;
-  }
-  
-  .card {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    height: 100%;
-    cursor: pointer;
-    transform-style: preserve-3d;
-    transform-origin: center right;
-    transition: transform 1s;
-  }
-  
-  .card.is-flipped {
-    transform: translateX(-100%) rotateY(-180deg);
-  }
-  
-  /*
-  .card__face--front {
-  }*/
-  
-  .card__face--back {
-    transform: rotateY(180deg);
-  }
-:root {
-    --scroll: 0
+    
 }
